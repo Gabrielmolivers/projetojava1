@@ -45,6 +45,10 @@ public class PrimeiraClasseJava {
 		} else {
 			System.out.println("Aluno Reprovado");
 		}
+		
+		String resultado = mediaFinal >= 70 ? "Aluno Aprovado" : "Aluno Reprovado";
+		
+		System.out.println(resultado);
 
 	}
 
