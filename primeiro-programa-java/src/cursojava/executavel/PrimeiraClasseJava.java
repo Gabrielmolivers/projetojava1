@@ -19,6 +19,13 @@ public class PrimeiraClasseJava {
 	System.out.println("de um velho é = " + idosoIdade);
 	System.out.println("meu CPF é " + cpf);
 	
+		int nota1 = 90;
+		int nota2 = 15;
+		int nota3 = 35;
+		int nota4 = 85;
+		
+		System.out.println("Media das notas = " + (nota1 + nota2 + nota3 + nota4) / 4);
 	
 	}
 }
+
