@@ -19,13 +19,26 @@ public class PrimeiraClasseJava {
 	System.out.println("de um velho é = " + idosoIdade);
 	System.out.println("meu CPF é " + cpf);
 	
-		int nota1 = 90;
-		int nota2 = 15;
-		int nota3 = 35;
-		int nota4 = 85;
+		double nota1 = 90;
+		double nota2 = 15;
+		double nota3 = 37;
+		double nota4 = 85;
 		
-		System.out.println("Media das notas = " + (nota1 + nota2 + nota3 + nota4) / 4);
+		double mediaFinal = (nota1 + nota2 + nota3 + nota4) / 4;
+		
+		System.out.println("Media das notas = " + mediaFinal);
+	
+	char pessoaFisica = 'F';
+	
+	char pessoaJuridica = 'J';
+	
+		if(pessoaFisica != 'F') {
+			System.out.println("Pessoa Física");
+		}else {
+			System.out.println("Pessoa Jurídica");
+		}
 	
 	}
+	
 }
 
