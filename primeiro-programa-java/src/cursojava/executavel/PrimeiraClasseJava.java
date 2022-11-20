@@ -67,8 +67,18 @@ public class PrimeiraClasseJava {
 				System.out.println("Encontrei o valor");
 				System.out.println("Vou parar agora");
 				break;
+			}			
+		}
+		
+		for (int valor4 = 10; valor4 >= 0; valor4 --) {
+			if (valor4 == 5 || valor4 == 3 || valor4 == 1) {
+				System.out.println("Encontrei o valor" + valor4);
+				System.out.println("Vou continuar");
+				continue;
 			}
 		}
+		
+		
 	}
 
 }
