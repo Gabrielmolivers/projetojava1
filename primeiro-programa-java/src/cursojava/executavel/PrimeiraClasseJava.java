@@ -98,7 +98,7 @@ public class PrimeiraClasseJava {
 		
 		double restante = anosNumero % carroNumero;
 		
-		System.out.println("Dividindo deu " + dividindo + " itens e sobrou " + restante);
+		JOptionPane.showMessageDialog(null, "Dividindo deu " + dividindo + " itens e sobrou " + restante);
 
 	}
 
