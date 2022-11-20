@@ -45,40 +45,43 @@ public class PrimeiraClasseJava {
 		} else {
 			System.out.println("Aluno Reprovado");
 		}
-		
+
 		String resultado = mediaFinal >= 70 ? "Aluno Aprovado" : "Aluno Reprovado";
-		
+
 		System.out.println(resultado);
 
 		int valor1 = 0;
-		
+
 		while (valor1 <= 10) {
 			System.out.println("O valor é = " + valor1);
-				valor1++;
-			
+			valor1++;
+
 		}
-		
-		for (int valor2 = 10; valor2 >= 0; valor2 --) {
+
+		for (int valor2 = 10; valor2 >= 0; valor2--) {
 			System.out.println("O numero agora é " + valor2);
 		}
-		
-		for (int valor3 = 10; valor3 >= 0; valor3 --) {
+
+		for (int valor3 = 10; valor3 >= 0; valor3--) {
 			if (valor3 == 7) {
 				System.out.println("Encontrei o valor");
 				System.out.println("Vou parar agora");
 				break;
-			}			
+			}
 		}
-		
-		for (int valor4 = 10; valor4 >= 0; valor4 --) {
+
+		for (int valor4 = 10; valor4 >= 0; valor4--) {
 			if (valor4 == 5 || valor4 == 3 || valor4 == 1) {
 				System.out.println("Encontrei o valor" + valor4);
 				System.out.println("Vou continuar");
 				continue;
 			}
+			
+			System.out.println("Processando dados...");
 		}
 		
 		
+
 	}
 
 }
