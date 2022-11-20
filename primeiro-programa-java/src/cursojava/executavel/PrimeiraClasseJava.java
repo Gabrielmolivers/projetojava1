@@ -62,6 +62,13 @@ public class PrimeiraClasseJava {
 			System.out.println("O numero agora é " + valor2);
 		}
 		
+		for (int valor3 = 10; valor3 >= 0; valor3 --) {
+			if (valor3 == 7) {
+				System.out.println("Encontrei o valor");
+				System.out.println("Vou parar agora");
+				break;
+			}
+		}
 	}
 
 }
