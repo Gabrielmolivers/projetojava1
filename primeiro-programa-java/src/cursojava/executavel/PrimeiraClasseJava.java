@@ -50,6 +50,18 @@ public class PrimeiraClasseJava {
 		
 		System.out.println(resultado);
 
+		int valor1 = 0;
+		
+		while (valor1 <= 10) {
+			System.out.println("O valor é = " + valor1);
+				valor1++;
+			
+		}
+		
+		for (int valor2 = 10; valor2 >= 0; valor2 --) {
+			System.out.println("O numero agora é " + valor2);
+		}
+		
 	}
 
 }
