@@ -1,5 +1,7 @@
 package cursojava.executavel;
 
+import javax.swing.JOptionPane;
+
 public class PrimeiraClasseJava {
 
 	public static void main(String[] args) {
@@ -80,7 +82,23 @@ public class PrimeiraClasseJava {
 			System.out.println("Processando dados...");
 		}
 		
+		String carros = JOptionPane.showInputDialog("informe a quantidade de carros que você possui");
+		System.out.println(carros);
 		
+		String nomeCompleto = JOptionPane.showInputDialog("informe seu nome completo");
+		System.out.println(nomeCompleto);
+		
+		String anos = JOptionPane.showInputDialog("informe sua idade");
+		System.out.println(anos);
+		
+		double carroNumero = Double.parseDouble(carros);
+		double anosNumero = Double.parseDouble(anos);		
+	
+		int dividindo = (int) (anosNumero / carroNumero);
+		
+		double restante = anosNumero % carroNumero;
+		
+		System.out.println("Dividindo deu " + dividindo + " itens e sobrou " + restante);
 
 	}
 
