@@ -66,7 +66,7 @@ public class PrimeiraClasseJava {
 
 		for (int valor3 = 10; valor3 >= 0; valor3--) {
 			if (valor3 == 7) {
-				System.out.println("Encontrei o valor");
+				System.out.println("Encontrei o valor ");
 				System.out.println("Vou parar agora");
 				break;
 			}
@@ -74,7 +74,7 @@ public class PrimeiraClasseJava {
 
 		for (int valor4 = 10; valor4 >= 0; valor4--) {
 			if (valor4 == 5 || valor4 == 3 || valor4 == 1) {
-				System.out.println("Encontrei o valor" + valor4);
+				System.out.println("Encontrei o valor " + valor4);
 				System.out.println("Vou continuar");
 				continue;
 			}
@@ -82,23 +82,23 @@ public class PrimeiraClasseJava {
 			System.out.println("Processando dados...");
 		}
 		
-		String carros = JOptionPane.showInputDialog("informe a quantidade de carros que você possui");
-		System.out.println(carros);
+		String itens = JOptionPane.showInputDialog("informe a quantidade de itens que você possui");
+		System.out.println(itens);
 		
 		String nomeCompleto = JOptionPane.showInputDialog("informe seu nome completo");
 		System.out.println(nomeCompleto);
 		
-		String anos = JOptionPane.showInputDialog("informe sua idade");
-		System.out.println(anos);
+		String pessoas = JOptionPane.showInputDialog("informe quantas pessoas vão dividir os itens");
+		System.out.println(pessoas);
 		
-		double carroNumero = Double.parseDouble(carros);
-		double anosNumero = Double.parseDouble(anos);		
+		double itensNumero = Double.parseDouble(itens);
+		double pessoasNumero = Double.parseDouble(pessoas);		
 	
-		int dividindo = (int) (anosNumero / carroNumero);
+		int dividindo = (int) (itensNumero / pessoasNumero);
 		
-		double restante = anosNumero % carroNumero;
+		double restante = itensNumero % pessoasNumero;
 		
-		JOptionPane.showMessageDialog(null, "Dividindo deu " + dividindo + " itens e sobrou " + restante);
+		JOptionPane.showMessageDialog(null, "Dividindo deu para cada " + dividindo + " itens e sobrou " + restante);
 
 		
 	}
