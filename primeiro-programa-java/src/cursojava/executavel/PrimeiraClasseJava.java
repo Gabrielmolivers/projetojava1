@@ -121,6 +121,16 @@ public class PrimeiraClasseJava {
 		double converterNota4 = Double.parseDouble(notaBimestre4);
 
 		double mediaBimestre = (converterNota1 + converterNota2 + converterNota3 + converterNota4) / 4;
+		if (mediaBimestre >= 50) {
+			if (mediaBimestre >= 70) {
+				JOptionPane.showMessageDialog(null, "Aluno aprovado");
+			} else {
+				JOptionPane.showMessageDialog(null, "Aluno de Recuperação");
+			}
+		}
+		if (mediaBimestre <= 50) {
+			JOptionPane.showMessageDialog(null, "Aluno reprovado");
+		}
 		int confirmacaoNota = JOptionPane.showConfirmDialog(null, "Deseja ver a média?");
 		if (confirmacaoNota == 0) {
 			JOptionPane.showMessageDialog(null, "A média do Aluno é = " + mediaBimestre);
@@ -133,7 +143,9 @@ public class PrimeiraClasseJava {
 		if (confirmacaoHora == 0) {
 			JOptionPane.showMessageDialog(null, quantidadeHora + " horas da " + horaSegundos + " segundos");
 		}
-
+		
+		
+		
 	}
 
 }
