@@ -78,29 +78,45 @@ public class PrimeiraClasseJava {
 				System.out.println("Vou continuar");
 				continue;
 			}
-			
+
 			System.out.println("Processando dados...");
 		}
-		
+
 		String itens = JOptionPane.showInputDialog("informe a quantidade de itens que você possui");
 		System.out.println(itens);
-		
+
 		String nomeCompleto = JOptionPane.showInputDialog("informe seu nome completo");
 		System.out.println(nomeCompleto);
-		
+
 		String pessoas = JOptionPane.showInputDialog("informe quantas pessoas vão dividir os itens");
 		System.out.println(pessoas);
-		
+
 		double itensNumero = Double.parseDouble(itens);
-		double pessoasNumero = Double.parseDouble(pessoas);		
-	
+		double pessoasNumero = Double.parseDouble(pessoas);
+
 		int dividindo = (int) (itensNumero / pessoasNumero);
-		
+
 		double restante = itensNumero % pessoasNumero;
 		
-		JOptionPane.showMessageDialog(null, "Dividindo deu para cada " + dividindo + " itens e sobrou " + restante);
-
+		int resposta = JOptionPane.showConfirmDialog(null, "Deseja ver o resultado da divisão?");
+				
+		if (resposta == 0) {
+			JOptionPane.showMessageDialog(null, "Dividindo deu para cada " + dividindo);
+		}
+		
+		resposta = JOptionPane.showConfirmDialog(null, "Deseja ver o resto da divisão?");
+		
+		if (resposta == 0) {
+			JOptionPane.showMessageDialog(null, "O resto da divisão é " + restante);
+		}
+		
+		
+		
+		
+		
 		
 	}
+	
+	
 
 }
