@@ -97,26 +97,35 @@ public class PrimeiraClasseJava {
 		int dividindo = (int) (itensNumero / pessoasNumero);
 
 		double restante = itensNumero % pessoasNumero;
-		
+
 		int resposta = JOptionPane.showConfirmDialog(null, "Deseja ver o resultado da divisão?");
-				
+
 		if (resposta == 0) {
 			JOptionPane.showMessageDialog(null, "Dividindo deu para cada " + dividindo);
 		}
-		
+
 		resposta = JOptionPane.showConfirmDialog(null, "Deseja ver o resto da divisão?");
-		
+
 		if (resposta == 0) {
 			JOptionPane.showMessageDialog(null, "O resto da divisão é " + restante);
 		}
 		
+		String notaBimestre1 = JOptionPane.showInputDialog("Informe a nota do 1º Bimestre");
+		String notaBimestre2 = JOptionPane.showInputDialog("Informe a nota do 2º Bimestre");
+		String notaBimestre3 = JOptionPane.showInputDialog("Informe a nota do 3º Bimestre");
+		String notaBimestre4 = JOptionPane.showInputDialog("Informe a nota do 4º Bimestre");
 		
+		double converterNota1 = Double.parseDouble(notaBimestre1);
+		double converterNota2 = Double.parseDouble(notaBimestre2);
+		double converterNota3 = Double.parseDouble(notaBimestre3);
+		double converterNota4 = Double.parseDouble(notaBimestre4);
 		
-		
-		
-		
+		double mediaBimestre = (converterNota1 + converterNota2 + converterNota3 + converterNota4) / 4;
+		int confirmacaoNota = JOptionPane.showConfirmDialog(null, "Deseja ver a média?");
+		if (confirmacaoNota == 0) {
+			JOptionPane.showMessageDialog(null, "A média do Aluno é = " + mediaBimestre);
+		}
+				
 	}
-	
-	
 
 }
