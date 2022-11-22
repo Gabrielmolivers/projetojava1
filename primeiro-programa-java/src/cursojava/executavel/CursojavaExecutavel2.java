@@ -18,13 +18,14 @@ public class CursojavaExecutavel2 {
 		aluno1.setSerieMatriculado("8");
 		aluno1.setNomeEscola("Escola Rio Branco");
 		aluno1.setNota1(80);
-		aluno1.setNota2(78);
+		aluno1.setNota2(70);
 		aluno1.setNota3(58);
-		aluno1.setNota4(65);
+		aluno1.setNota4(90);
 		
 				
 		System.out.println("Nome é = " + aluno1.getNome());
 		System.out.println("Media da nota é = " + aluno1.getMediaNota());
+		System.out.println("O aluno está aprovado? " + (aluno1.getAlunoAprovado() ? "Aprovado" : "Reprovado"));
 	
 		Aluno aluno2 = new Aluno();
 		
