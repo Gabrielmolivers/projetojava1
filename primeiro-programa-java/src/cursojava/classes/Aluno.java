@@ -1,7 +1,10 @@
 package cursojava.classes;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Aluno {
-	
+
 	private String nome;
 	private int idade;
 	private String dataNascimento;
@@ -12,36 +15,35 @@ public class Aluno {
 	private String dataMatricula;
 	private String nomeEscola;
 	private String serieMatriculado;
-	
-	private Disciplina disciplina = new Disciplina();
-	
-	public void setDisciplina(Disciplina disciplina) {
-		this.disciplina = disciplina;
-	}
-	public Disciplina getDisciplina() {
-		return disciplina;
-	}
-	
 
+	private List<Disciplina> disciplinas = new ArrayList<Disciplina>();
+
+	public void setDisciplinas(List<Disciplina> disciplinas) {
+		this.disciplinas = disciplinas;
+	}
+
+	public List<Disciplina> getDisciplinas() {
+		return disciplinas;
+	}
 
 	public Aluno() {
-		
+
 	}
-	
-	public Aluno (String nomePadrao) {
+
+	public Aluno(String nomePadrao) {
 		nome = nomePadrao;
 	}
-	
-	public Aluno (String nomePadrao, int idadePadrao) {
+
+	public Aluno(String nomePadrao, int idadePadrao) {
 		nome = nomePadrao;
 		idade = idadePadrao;
-		
+
 	}
-	
+
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	
+
 	public String getNome() {
 		return nome;
 	}
@@ -119,25 +121,31 @@ public class Aluno {
 	}
 
 	public double getMediaNota() {
-		return (disciplina.getNota1() + disciplina.getNota2() + disciplina.getNota3() + disciplina.getNota4()) /4;
+		
+		double somaNotas = 0.0;
+		
+		for (Disciplina disciplina : disciplinas) {
+			somaNotas += disciplina.getNota();
+		}
+		
+		return somaNotas / disciplinas.size();
 	}
-	
+
 	public boolean getAlunoAprovado() {
 		double media = this.getMediaNota();
 		if (media >= 70) {
 			return true;
-		}else {
+		} else {
 			return false;
 		}
 	}
+
 	@Override
 	public String toString() {
 		return "Aluno [nome=" + nome + ", idade=" + idade + ", dataNascimento=" + dataNascimento + ", registroGeral="
 				+ registroGeral + ", numeroCpf=" + numeroCpf + ", nomeMae=" + nomeMae + ", nomePai=" + nomePai
 				+ ", dataMatricula=" + dataMatricula + ", nomeEscola=" + nomeEscola + ", serieMatriculado="
-				+ serieMatriculado + ", disciplina=" + disciplina + "]";
+				+ serieMatriculado + "]";
 	}
-	
-	
-	
+
 }
