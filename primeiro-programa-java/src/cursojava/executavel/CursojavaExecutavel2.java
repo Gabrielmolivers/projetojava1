@@ -39,18 +39,18 @@ public class CursojavaExecutavel2 {
 		aluno1.setSerieMatriculado(serieMatriculado);
 		aluno1.setNomeEscola(nomeEscola);
 		
-		aluno1.setNota1(Integer.valueOf(nota1));
-		aluno1.setNota2(Integer.valueOf(nota2));
-		aluno1.setNota3(Integer.valueOf(nota3));
-		aluno1.setNota4(Integer.valueOf(nota4));
+		aluno1.getDisciplina().setNota1(Integer.valueOf(nota1));
+		aluno1.getDisciplina().setNota2(Integer.valueOf(nota2));
+		aluno1.getDisciplina().setNota3(Integer.valueOf(nota3));
+		aluno1.getDisciplina().setNota4(Integer.valueOf(nota4));
 		
-		aluno1.setDisciplina1(disciplina1);
-		aluno1.setDisciplina2(disciplina2);
-		aluno1.setDisciplina3(disciplina3);
-		aluno1.setDisciplina4(disciplina4);
+		aluno1.getDisciplina().setDisciplina1(disciplina1);
+		aluno1.getDisciplina().setDisciplina2(disciplina2);
+		aluno1.getDisciplina().setDisciplina3(disciplina3);
+		aluno1.getDisciplina().setDisciplina4(disciplina4);
 		
 				
-		System.out.println("Aluno: " + aluno1.getNome());
+		System.out.println("Aluno: " + aluno1.toString());
 		System.out.println("Média: " + aluno1.getMediaNota());
 		System.out.println("O aluno esta " + (aluno1.getAlunoAprovado() ? "Aprovado" : "Reprovado"));
 	
