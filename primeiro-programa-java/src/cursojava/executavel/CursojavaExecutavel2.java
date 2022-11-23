@@ -7,12 +7,21 @@ import javax.swing.JOptionPane;
 
 import cursojava.classes.Aluno;
 import cursojava.classes.Disciplina;
+import cursojava.constantes.StatusAluno;
 
 public class CursojavaExecutavel2 {
 
 	public static void main(String[] args) {
+		
+		String login = JOptionPane.showInputDialog("Login:");
+		String senha = JOptionPane.showInputDialog("Senha:");
+		
+		if (login.equalsIgnoreCase("admin") && senha.equalsIgnoreCase("admin")) {
 
 		List<Aluno> alunos = new ArrayList<Aluno>();
+		List<Aluno> alunosAprovados = new ArrayList<Aluno>();
+		List<Aluno> alunosReprovados = new ArrayList<Aluno>();
+		List<Aluno> alunosRecuperacao = new ArrayList<Aluno>();
 
 		for (int qtd = 1; qtd <= 2; qtd++) {
 
@@ -53,11 +62,19 @@ public class CursojavaExecutavel2 {
 		}
 
 		for (Aluno aluno : alunos) {
+			if (aluno.getAlunoAprovado().equalsIgnoreCase(StatusAluno.APROVADO)) {
+				alunosAprovados.add(aluno);
+			} else if (aluno.getAlunoAprovado().equalsIgnoreCase(StatusAluno.RECUPERACAO)) {
+				alunosRecuperacao.add(aluno);
 
-			System.out.println(aluno);
-			System.out.println("Média: " + aluno.getMediaNota());
-			System.out.println("O aluno esta " + aluno.getAlunoAprovado());
-
+			} else if (aluno.getAlunoAprovado().equalsIgnoreCase(StatusAluno.REPROVADO)) {
+				alunosReprovados.add(aluno);
+			}
+		}
+		
+		
+		
+		
 		}
 
 	}
