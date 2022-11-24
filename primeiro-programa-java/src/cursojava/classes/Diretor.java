@@ -23,6 +23,11 @@ public class Diretor extends Pessoas {
 	public void setTitulacao(String titulacao) {
 		this.titulacao = titulacao;
 	}
+	@Override
+	public double salario() {
+		// TODO Auto-generated method stub
+		return 4526.35;
+	}
 	
 	
 

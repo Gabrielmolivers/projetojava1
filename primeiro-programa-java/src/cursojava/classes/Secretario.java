@@ -23,6 +23,11 @@ public class Secretario extends Pessoas{
 	public void setExperiencia(String experiencia) {
 		this.experiencia = experiencia;
 	}
+	@Override
+	public double salario() {
+		// TODO Auto-generated method stub
+		return 1800.60 * 0.9;
+	}
 	
 	
 

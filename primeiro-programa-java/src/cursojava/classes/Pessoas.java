@@ -1,6 +1,6 @@
 package cursojava.classes;
 
-public class Pessoas {
+public abstract class Pessoas {
 	
 	protected String nome;
 	protected int idade;
@@ -9,6 +9,10 @@ public class Pessoas {
 	protected String numeroCpf;
 	protected String nomeMae;
 	protected String nomePai;
+	
+	public abstract double salario();
+	
+	
 	
 	public String getNome() {
 		return nome;
