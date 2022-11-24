@@ -20,7 +20,7 @@ public class TestandoClasseFilho {
 		secretario.setExperiencia("Top");
 		secretario.setIdade(35);
 		
-		
+		System.out.println(secretario.salario());
 		
 		
 	}
