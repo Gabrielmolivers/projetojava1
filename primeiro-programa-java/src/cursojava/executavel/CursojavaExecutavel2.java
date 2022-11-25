@@ -9,6 +9,7 @@ import cursojava.classes.Aluno;
 import cursojava.classes.Disciplina;
 import cursojava.classes.Secretario;
 import cursojava.constantes.StatusAluno;
+import cursojava.interfaces.PermitirAcesso;
 
 public class CursojavaExecutavel2 {
 
@@ -17,11 +18,9 @@ public class CursojavaExecutavel2 {
 		String login = JOptionPane.showInputDialog("Login:");
 		String senha = JOptionPane.showInputDialog("Senha:");
 		
-		Secretario secretario = new Secretario();
-		secretario.setLogin(login);
-		secretario.setSenha(senha);
+		PermitirAcesso permitirAcesso = new Secretario(login, senha);
 		
-		if (secretario.autenticar()) {
+		if (permitirAcesso.autenticar()) {
 
 		List<Aluno> alunos = new ArrayList<Aluno>();
 		List<Aluno> alunosAprovados = new ArrayList<Aluno>();
