@@ -6,8 +6,9 @@ import java.util.List;
 import javax.swing.JOptionPane;
 
 import cursojava.classes.Aluno;
+import cursojava.classes.Diretor;
 import cursojava.classes.Disciplina;
-import cursojava.classes.Secretario;
+import cursojava.classesauxiliares.FuncaoAutenticacao;
 import cursojava.constantes.StatusAluno;
 import cursojava.interfaces.PermitirAcesso;
 
@@ -18,9 +19,11 @@ public class CursojavaExecutavel2 {
 		String login = JOptionPane.showInputDialog("Login:");
 		String senha = JOptionPane.showInputDialog("Senha:");
 		
-		PermitirAcesso permitirAcesso = new Secretario(login, senha);
+		FuncaoAutenticacao autenticacao = new FuncaoAutenticacao();
 		
-		if (permitirAcesso.autenticar()) {
+		PermitirAcesso permitirAcesso = new Diretor(login, senha);
+		
+		if (autenticacao.autenticarCursoJava(permitirAcesso)) {
 
 		List<Aluno> alunos = new ArrayList<Aluno>();
 		List<Aluno> alunosAprovados = new ArrayList<Aluno>();
