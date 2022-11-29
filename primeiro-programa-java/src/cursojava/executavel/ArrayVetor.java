@@ -29,6 +29,22 @@ public class ArrayVetor {
 	disciplina2.setNota(notaJs);
 		
 	aluno.getDisciplinas().add(disciplina2);
+	
+	Aluno[] arrayAlunos = new Aluno[1];
+	arrayAlunos[0] = aluno;
+	
+	for (int pos = 0; pos < arrayAlunos.length; pos ++) {
+		System.out.println("Nome do aluno: " + arrayAlunos[pos].getNome());
+		
+		for (Disciplina d : arrayAlunos[pos].getDisciplinas()) {
+			System.out.println("Disciplina: " + d.getDisciplina());
+			
+			for
+			
+		}
+		
+	}
+	
 		
 	}
 
