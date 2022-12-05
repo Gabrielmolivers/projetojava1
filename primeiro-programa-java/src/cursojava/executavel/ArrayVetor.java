@@ -39,7 +39,9 @@ public class ArrayVetor {
 		for (Disciplina d : arrayAlunos[pos].getDisciplinas()) {
 			System.out.println("Disciplina: " + d.getDisciplina());
 			
-			for
+			for (int posnota = 0; posnota < d.getNota().length; posnota++) {
+				System.out.println("A nota número: " + (posnota + 1) + " é igual =" + d.getNota()[posnota]);
+			}
 			
 		}
 		
