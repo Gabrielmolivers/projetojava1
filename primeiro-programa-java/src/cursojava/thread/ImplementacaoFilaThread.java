@@ -13,10 +13,14 @@ public class ImplementacaoFilaThread extends Thread {
 
 	@Override
 	public void run() {
-		Iterator iteracao = pilha_fila.iterator();
+		System.out.println("Fila Rodando");
 		
-		synchronized (iteracao) {
+		
+		while (true) {
+				
+		synchronized (pilha_fila) {
 			
+			Iterator iteracao = pilha_fila.iterator();
 			while (iteracao.hasNext()) {
 
 				ObjetoFilaThread processar = (ObjetoFilaThread) iteracao.next();
@@ -41,6 +45,8 @@ public class ImplementacaoFilaThread extends Thread {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
+		}
 	}
+	
 
 }
