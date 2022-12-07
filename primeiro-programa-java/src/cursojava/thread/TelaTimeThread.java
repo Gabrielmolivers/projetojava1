@@ -86,7 +86,7 @@ public class TelaTimeThread extends JDialog {
 					filaThread.setNome(mostraTempo.getText());
 					filaThread.setEmail(mostraTempo2.getText() + " - " + qtd);
 					
-					fila.add(filaThread);
+					ImplementacaoFilaThread.add(filaThread);
 					
 				}
 
