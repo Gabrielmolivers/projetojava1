@@ -2,6 +2,8 @@ package modulo_datas;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -37,12 +39,36 @@ public class DatasEmJava {
 		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
 		
 		System.out.println("Data atual: " + simpleDateFormat.format(date));
+		System.out.println("Calendar Data atual: " + simpleDateFormat.format(calendar.getTime()));
 		
 		simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		
 		System.out.println("Data para banco de Dados: " + simpleDateFormat.format(date));
 		
 		System.out.println("Objeto Date " + simpleDateFormat.parse("1987-10-18 20:10:51"));
+		
+		/*Comparacao de datas*/
+		
+		SimpleDateFormat simplesDateFormat = new SimpleDateFormat("dd/MM/yyyy");
+		
+		Date dataVencimentoBoleto = simplesDateFormat.parse("10/04/2021");
+		
+		Date dataAtualHoje = simplesDateFormat.parse("11/04/2021");
+		
+		if (dataVencimentoBoleto.after(dataAtualHoje)) {
+			System.out.println("Boleto não vencido");
+		}else {
+			System.out.println("Boleto vencido - URGENTE");
+		}
+		
+		
+		
+		long dias = ChronoUnit.DAYS.between(LocalDate.parse("2022-09-18"), LocalDate.now());
+		
+		System.out.println("Faz " + dias + " dias desde meu aniversário de 24 anos");
+		
+		
+		
 		
 	}
 
